@@ -4,4 +4,4 @@ Application using Weather API. Able to search temperature, humidity, wind speed,
 
 [Deployed Application Link](https://parinthalangdee.github.io/06-WeatherDashboard/)
 
-![WeatherDashboard Screenshot](assets/images/WeatherDashboard%20Screenshot.png)
+![WeatherDashboard Screenshot](./Assets/images/WeatherDashboard%20Screenshot.png)
