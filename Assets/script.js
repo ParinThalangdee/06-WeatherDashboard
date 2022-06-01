@@ -131,6 +131,24 @@ $("#searchBtn").on("click", function (event) {
   console.log(searchHistoryList);
 });
 
+// add enter button event listener 
+var input = document.getElementById("enterCity");
+
+input.addEventListener("keypress", function (event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    var city = $("#enterCity").val().trim()
+    currentCondition(city)
+  }
+  if (!searchHistoryList.includes(city)) {
+    searchHistoryList.push(city);
+    var searchedCity = $(`
+            <li class="list-group-item">${city}</li>
+            `);
+    $("#searchHistory").append(searchedCity);
+  };
+});
+
 // WHEN I click on a city in the search history
 // THEN I am again presented with current and future conditions for that city
 $(document).on("click", ".list-group-item", function () {
